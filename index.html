@@ -31,8 +31,9 @@
           <li><a href="#accueil"   class="nav__link">Accueil</a></li>
           <li><a href="#apropos"   class="nav__link">À propos</a></li>
           <li><a href="#services"  class="nav__link">Services</a></li>
-          <li><a href="#zones"     class="nav__link">Zones</a></li>
-          <li><a href="#contact"   class="nav__link nav__link--cta">Contactez-nous</a></li>
+          <li><a href="#zones"          class="nav__link">Zones</a></li>
+          <li><a href="pages/recrutement.html" class="nav__link">Recrutement</a></li>
+          <li><a href="#contact"        class="nav__link nav__link--cta">Contactez-nous</a></li>
         </ul>
       </nav>
     </div>
@@ -98,6 +99,32 @@
         <p class="section__subtitle">Des solutions adaptées à chaque besoin, gérées avec professionnalisme.</p>
       </div>
       <div class="services__grid">
+        <div class="service-card service-card--featured">
+          <div class="service-card__badge">Spécialité</div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Snowflake -->
+              <line x1="24" y1="6" x2="24" y2="42" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="24" x2="42" y2="24" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10.5" y1="10.5" x2="37.5" y2="37.5" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="37.5" y1="10.5" x2="10.5" y2="37.5" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+              <!-- Branch tips -->
+              <path d="M24 6 L21 10 M24 6 L27 10" stroke="#1B4B8A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M24 42 L21 38 M24 42 L27 38" stroke="#1B4B8A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M6 24 L10 21 M6 24 L10 27" stroke="#1B4B8A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M42 24 L38 21 M42 24 L38 27" stroke="#1B4B8A" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Center circle -->
+              <circle cx="24" cy="24" r="4" fill="#1B4B8A" opacity=".15" stroke="#1B4B8A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Transport frigorifique</h3>
+          <p class="service-card__text">Acheminement de marchandises sous température contrôlée, de -25 °C à 0 °C. Idéal pour les denrées alimentaires, produits pharmaceutiques et marchandises sensibles.</p>
+          <ul class="service-card__list">
+            <li>Température de -25 °C à 0 °C</li>
+            <li>Suivi de température en continu</li>
+            <li>Conformité réglementation ATP</li>
+          </ul>
+        </div>
         <div class="service-card">
           <div class="service-card__icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,8 +144,7 @@
             <li>Palettes & charges lourdes</li>
           </ul>
         </div>
-        <div class="service-card service-card--featured">
-          <div class="service-card__badge">Populaire</div>
+        <div class="service-card">
           <div class="service-card__icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="18" fill="#1B4B8A" opacity=".1"/>
@@ -166,34 +192,10 @@
       <div class="zones__inner">
         <div class="zones__map">
           <div class="map-visual">
-            <svg viewBox="0 0 300 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="france-map">
-              <!-- Simplified France outline -->
-              <path d="M110 20 L145 15 L175 25 L200 20 L220 40 L240 60 L255 90 L260 120 L255 150 L265 175 L260 205 L245 230 L235 255 L215 270 L195 285 L175 295 L155 305 L135 300 L115 290 L95 275 L75 265 L60 245 L50 225 L45 200 L40 175 L45 150 L40 125 L50 100 L55 75 L65 55 L80 35 L110 20Z" fill="#E8EFF8" stroke="#1B4B8A" stroke-width="2"/>
-              <!-- IDF region highlight -->
-              <circle cx="155" cy="155" r="22" fill="#1B4B8A" opacity=".2" stroke="#1B4B8A" stroke-width="1.5" stroke-dasharray="4 2"/>
-              <!-- Paris dot -->
-              <circle cx="155" cy="155" r="8" fill="#1B4B8A"/>
-              <circle cx="155" cy="155" r="4" fill="#fff"/>
-              <!-- Coverage dots -->
-              <circle cx="200" cy="90" r="5" fill="#1B4B8A" opacity=".5"/>
-              <circle cx="230" cy="180" r="5" fill="#1B4B8A" opacity=".5"/>
-              <circle cx="180" cy="270" r="5" fill="#1B4B8A" opacity=".5"/>
-              <circle cx="100" cy="240" r="5" fill="#1B4B8A" opacity=".5"/>
-              <circle cx="65" cy="160" r="5" fill="#1B4B8A" opacity=".5"/>
-              <circle cx="90" cy="80" r="5" fill="#1B4B8A" opacity=".5"/>
-              <!-- Connection lines -->
-              <line x1="155" y1="155" x2="200" y2="90" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
-              <line x1="155" y1="155" x2="230" y2="180" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
-              <line x1="155" y1="155" x2="180" y2="270" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
-              <line x1="155" y1="155" x2="100" y2="240" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
-              <line x1="155" y1="155" x2="65" y2="160" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
-              <line x1="155" y1="155" x2="90" y2="80" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
-              <!-- Labels -->
-              <text x="145" y="148" font-size="9" fill="#1B4B8A" font-weight="700" font-family="Inter, sans-serif">Paris</text>
-            </svg>
+            <img src="asset/map/MapChart_Map.png" alt="Carte des zones couvertes par BNS Transport" class="map-img" />
             <div class="map-legend">
-              <span class="map-legend__dot map-legend__dot--main"></span> Base Paris
-              <span class="map-legend__dot map-legend__dot--secondary"></span> Zones couvertes
+              <span class="map-legend__item"><span class="map-legend__dot map-legend__dot--covered"></span>Zone couverte</span>
+              <span class="map-legend__item"><span class="map-legend__dot map-legend__dot--other"></span>Autre région</span>
             </div>
           </div>
         </div>
@@ -216,7 +218,7 @@
             <div class="zone-item__icon">🗺️</div>
             <div>
               <h3>Grand Est & Bourgogne</h3>
-              <p>Reims, Strasbourg, Dijon — axes autoroutiers A4 et A6 régulièrement desservis.</p>
+              <p>Reims, Strasbourg, Dijon — axes autoroutiers A4, A6 et N4 régulièrement desservis.</p>
             </div>
           </div>
           <div class="zone-item">
@@ -224,6 +226,20 @@
             <div>
               <h3>Ouest & Atlantique</h3>
               <p>Nantes, Rennes, Bordeaux — desserte régulière sur demande.</p>
+            </div>
+          </div>
+          <div class="zone-item">
+            <div class="zone-item__icon">🗺️</div>
+            <div>
+              <h3>Normandie</h3>
+              <p>Caen, Rouen, Le Havre et les principaux axes logistiques de la région.</p>
+            </div>
+          </div>
+          <div class="zone-item">
+            <div class="zone-item__icon">🗺️</div>
+            <div>
+              <h3>Centre-Val de Loire</h3>
+              <p>Orléans, Tours, Chartres — axe autoroutier A10 régulièrement desservi.</p>
             </div>
           </div>
           <div class="zone-callout">
@@ -316,6 +332,7 @@
             <label for="service">Type de prestation</label>
             <select id="service" name="service">
               <option value="">-- Sélectionnez --</option>
+              <option value="frigo">Transport frigorifique</option>
               <option value="fret">Transport de fret</option>
               <option value="express">Livraison express</option>
               <option value="longue">Longue distance</option>
@@ -361,6 +378,7 @@
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#zones">Zones</a></li>
+          <li><a href="pages/recrutement.html">Recrutement</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
