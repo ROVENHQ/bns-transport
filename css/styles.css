@@ -28,7 +28,11 @@
   --header-h:    68px;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
 
 body {
   font-family: var(--font);
@@ -36,6 +40,7 @@ body {
   background: var(--white);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -946,6 +951,8 @@ a.contact__value:hover { color: var(--blue); }
   border-radius: var(--radius);
   background: var(--white);
   transition: border-color .2s, background .2s;
+  overflow: hidden;
+  min-width: 0;
 }
 .file-upload:hover .file-upload__ui,
 .file-upload:focus-within .file-upload__ui {
@@ -966,6 +973,7 @@ a.contact__value:hover { color: var(--blue); }
   font-weight: 500;
   color: var(--blue);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .file-upload__name {
   font-size: .8rem;
@@ -973,6 +981,8 @@ a.contact__value:hover { color: var(--blue); }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
+  flex: 1;
 }
 .file-upload__error {
   font-size: .8rem;
@@ -1059,15 +1069,23 @@ a.contact__value:hover { color: var(--blue); }
     position: absolute;
     top: var(--header-h);
     left: 0; right: 0;
+    z-index: 99;
     background: var(--white);
     border-bottom: 1px solid var(--gray-100);
     box-shadow: var(--shadow);
-    padding: 12px 24px 20px;
+    padding: 0 24px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height .35s ease, padding .35s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height .35s ease, padding .35s ease, visibility .35s;
   }
-  .nav.open { max-height: 400px; }
+  .nav.open {
+    max-height: 400px;
+    padding: 12px 24px 20px;
+    visibility: visible;
+    pointer-events: auto;
+  }
 
   .nav__list {
     flex-direction: column;
@@ -1090,6 +1108,21 @@ a.contact__value:hover { color: var(--blue); }
   .form-row { grid-template-columns: 1fr; }
   .contact__form { padding: 24px; }
 
+  /* Recruitment mobile */
+  .recruit__inner { gap: 32px; }
+  .recruit__form {
+    padding: 20px 16px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .recruit__contact-note {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .upload-section { padding: 16px; }
+  .page-hero { padding: 80px 0 48px; }
+  .page-hero__title { font-size: 1.75rem; }
+
   /* Footer */
   .footer__inner {
     grid-template-columns: 1fr;
@@ -1104,4 +1137,109 @@ a.contact__value:hover { color: var(--blue); }
 @media (max-width: 400px) {
   .hero__badges { flex-direction: column; }
   .about__stats { grid-template-columns: 1fr; }
+
+  /* Recruitment — 320px safe */
+  .container {
+    padding-inline: 12px;
+  }
+
+  .recruit__form {
+    padding: 16px 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .recruit__info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .recruit__contact-note {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .upload-section {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .file-upload__ui {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .file-upload__text { font-size: .8rem; }
+
+  .recruit__criteria li { gap: 10px; }
+
+  .recruit__form .btn--full {
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 12px;
+  }
+
+  .page-hero__title { font-size: 1.5rem; }
+  .page-hero { padding: 72px 0 40px; }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 12px;
+  }
+
+  .recruit__inner,
+  .recruit__info,
+  .recruit__form,
+  .recruit__criteria,
+  .upload-section {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .recruit__form {
+    padding: 16px 12px;
+  }
+
+  .upload-section {
+    padding: 12px;
+  }
+
+  .recruit__contact-note {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .recruit__contact-note svg {
+    flex-shrink: 0;
+    min-width: 20px;
+  }
+
+  .form-group,
+  .form-row {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .file-upload,
+  .file-upload__ui {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .btn--full {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
