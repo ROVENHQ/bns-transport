@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BNS Transport — Transporteur routier professionnel basé à Paris. Fret, livraison express, longue distance. Devis gratuit." />
+  <title>BNS Transport — Transporteur routier Paris & France</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#accueil" class="logo">
+        <span class="logo__icon">
+          <img src="asset/logo/V3-remove.png" alt="BNS Transport" height="50">
+        </span>
+        <span class="logo__text">BNS<strong> Transport</strong></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="#accueil"   class="nav__link">Accueil</a></li>
+          <li><a href="#apropos"   class="nav__link">À propos</a></li>
+          <li><a href="#services"  class="nav__link">Services</a></li>
+          <li><a href="#zones"     class="nav__link">Zones</a></li>
+          <li><a href="#contact"   class="nav__link nav__link--cta">Contactez-nous</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="accueil">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Transport routier professionnel</p>
+      <h1 class="hero__title">Votre marchandise,<br>livrée à temps.<br><span>Partout en France.</span></h1>
+      <p class="hero__subtitle">BNS Transport prend en charge vos envois avec sérieux et réactivité — du colis urgent à la palette complète.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Demander un devis</a>
+        <a href="#services" class="btn btn--outline">Nos services</a>
+      </div>
+      <div class="hero__badges">
+        <div class="badge"><span class="badge__icon">✓</span>Réactivité 24h</div>
+        <div class="badge"><span class="badge__icon">✓</span>Suivi en temps réel</div>
+        <div class="badge"><span class="badge__icon">✓</span>Basé à Paris</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="apropos">
+  <div class="container about__inner">
+    <div class="about__text">
+      <p class="section__eyebrow">À propos de nous</p>
+      <h2 class="section__title">Une aventure familiale,<br>une fiabilité sans compromis</h2>
+      <p>Fondée à Paris par deux frères passionnés, BNS Transport est une société de transport routier indépendante qui mise sur la proximité, la rigueur et la relation de confiance avec ses clients.</p>
+      <p>Depuis 2 ans, nous intervenons auprès des professionnels comme des particuliers pour tous types de marchandises — en assurant des délais respectés et une prise en charge soignée à chaque étape.</p>
+      <p>Notre force : une équipe soudée, des véhicules entretenus régulièrement et une communication transparente du départ à la livraison.</p>
+      <a href="#contact" class="btn btn--primary btn--sm">Travailler avec nous</a>
+    </div>
+    <div class="about__stats">
+        <div class="stat-card">
+          <span class="stat-card__number">2 ans</span>
+          <span class="stat-card__label">D'expérience</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__number">100%</span>
+          <span class="stat-card__label">Livraisons tracées</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__number">Île-de-France</span>
+          <span class="stat-card__label">Siège à Paris</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__number">France</span>
+          <span class="stat-card__label">Couverture nationale</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Ce que nous faisons</p>
+        <h2 class="section__title">Nos prestations de transport</h2>
+        <p class="section__subtitle">Des solutions adaptées à chaque besoin, gérées avec professionnalisme.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="14" width="28" height="20" rx="2" fill="#1B4B8A" opacity=".15"/>
+              <rect x="4" y="14" width="28" height="20" rx="2" stroke="#1B4B8A" stroke-width="2"/>
+              <path d="M32 20h6l6 6v8h-12V20z" fill="#1B4B8A" opacity=".15"/>
+              <path d="M32 20h6l6 6v8h-12V20z" stroke="#1B4B8A" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="12" cy="36" r="4" fill="#1B4B8A"/>
+              <circle cx="38" cy="36" r="4" fill="#1B4B8A"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Transport de fret</h3>
+          <p class="service-card__text">Enlèvement et livraison de marchandises en vrac, palettes ou colis volumineux. Chargement complet ou groupage selon votre volume.</p>
+          <ul class="service-card__list">
+            <li>Chargement complet (FTL)</li>
+            <li>Groupage (LTL)</li>
+            <li>Palettes & charges lourdes</li>
+          </ul>
+        </div>
+        <div class="service-card service-card--featured">
+          <div class="service-card__badge">Populaire</div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" fill="#1B4B8A" opacity=".1"/>
+              <path d="M14 24l7 7 13-14" stroke="#1B4B8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Livraison express</h3>
+          <p class="service-card__text">Quand chaque heure compte. Nous assurons des livraisons urgentes en J+1 ou en same-day sur Paris et l'Île-de-France.</p>
+          <ul class="service-card__list">
+            <li>Same-day Paris & IDF</li>
+            <li>J+1 sur toute la France</li>
+            <li>Confirmation de livraison</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 36 C8 36 14 28 24 28 C34 28 40 36 40 36" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 36h40" stroke="#1B4B8A" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="20" r="6" fill="#1B4B8A" opacity=".15" stroke="#1B4B8A" stroke-width="2"/>
+              <path d="M18 12 L24 8 L30 12" stroke="#1B4B8A" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Longue distance</h3>
+          <p class="service-card__text">Transports sur l'ensemble du territoire national avec suivi de mission, respect des délais contractuels et communication régulière.</p>
+          <ul class="service-card__list">
+            <li>Couverture nationale</li>
+            <li>Suivi GPS de la mission</li>
+            <li>Rapport de livraison</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COVERAGE ZONES ========== -->
+  <section class="section zones" id="zones">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Zones de couverture</p>
+        <h2 class="section__title">Paris et toute la France</h2>
+        <p class="section__subtitle">Notre base d'opérations est à Paris, mais nous intervenons partout en France métropolitaine.</p>
+      </div>
+      <div class="zones__inner">
+        <div class="zones__map">
+          <div class="map-visual">
+            <svg viewBox="0 0 300 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="france-map">
+              <!-- Simplified France outline -->
+              <path d="M110 20 L145 15 L175 25 L200 20 L220 40 L240 60 L255 90 L260 120 L255 150 L265 175 L260 205 L245 230 L235 255 L215 270 L195 285 L175 295 L155 305 L135 300 L115 290 L95 275 L75 265 L60 245 L50 225 L45 200 L40 175 L45 150 L40 125 L50 100 L55 75 L65 55 L80 35 L110 20Z" fill="#E8EFF8" stroke="#1B4B8A" stroke-width="2"/>
+              <!-- IDF region highlight -->
+              <circle cx="155" cy="155" r="22" fill="#1B4B8A" opacity=".2" stroke="#1B4B8A" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <!-- Paris dot -->
+              <circle cx="155" cy="155" r="8" fill="#1B4B8A"/>
+              <circle cx="155" cy="155" r="4" fill="#fff"/>
+              <!-- Coverage dots -->
+              <circle cx="200" cy="90" r="5" fill="#1B4B8A" opacity=".5"/>
+              <circle cx="230" cy="180" r="5" fill="#1B4B8A" opacity=".5"/>
+              <circle cx="180" cy="270" r="5" fill="#1B4B8A" opacity=".5"/>
+              <circle cx="100" cy="240" r="5" fill="#1B4B8A" opacity=".5"/>
+              <circle cx="65" cy="160" r="5" fill="#1B4B8A" opacity=".5"/>
+              <circle cx="90" cy="80" r="5" fill="#1B4B8A" opacity=".5"/>
+              <!-- Connection lines -->
+              <line x1="155" y1="155" x2="200" y2="90" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+              <line x1="155" y1="155" x2="230" y2="180" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+              <line x1="155" y1="155" x2="180" y2="270" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+              <line x1="155" y1="155" x2="100" y2="240" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+              <line x1="155" y1="155" x2="65" y2="160" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+              <line x1="155" y1="155" x2="90" y2="80" stroke="#1B4B8A" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+              <!-- Labels -->
+              <text x="145" y="148" font-size="9" fill="#1B4B8A" font-weight="700" font-family="Inter, sans-serif">Paris</text>
+            </svg>
+            <div class="map-legend">
+              <span class="map-legend__dot map-legend__dot--main"></span> Base Paris
+              <span class="map-legend__dot map-legend__dot--secondary"></span> Zones couvertes
+            </div>
+          </div>
+        </div>
+        <div class="zones__list">
+          <div class="zone-item zone-item--primary">
+            <div class="zone-item__icon">📍</div>
+            <div>
+              <h3>Paris & Île-de-France</h3>
+              <p>Couverture quotidienne — livraisons same-day disponibles sur toute la région parisienne (75, 77, 78, 91, 92, 93, 94, 95).</p>
+            </div>
+          </div>
+          <div class="zone-item">
+            <div class="zone-item__icon">🗺️</div>
+            <div>
+              <h3>Nord & Hauts-de-France</h3>
+              <p>Lille, Amiens, Rouen et les principaux centres logistiques de la région.</p>
+            </div>
+          </div>
+          <div class="zone-item">
+            <div class="zone-item__icon">🗺️</div>
+            <div>
+              <h3>Grand Est & Bourgogne</h3>
+              <p>Reims, Strasbourg, Dijon — axes autoroutiers A4 et A6 régulièrement desservis.</p>
+            </div>
+          </div>
+          <div class="zone-item">
+            <div class="zone-item__icon">🗺️</div>
+            <div>
+              <h3>Ouest & Atlantique</h3>
+              <p>Nantes, Rennes, Bordeaux — desserte régulière sur demande.</p>
+            </div>
+          </div>
+          <div class="zone-callout">
+            <strong>Votre destination n'est pas listée ?</strong> Contactez-nous — nous étudions chaque demande individuellement.
+            <a href="#contact">Nous contacter →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Contactez-nous</p>
+        <h2 class="section__title">Parlons de votre besoin</h2>
+        <p class="section__subtitle">Devis rapide, réponse sous 24h. Appelez-nous directement ou remplissez le formulaire.</p>
+      </div>
+      <div class="contact__inner">
+        <div class="contact__info">
+          <h3>Nos coordonnées</h3>
+          <ul class="contact__details">
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.01z"/></svg>
+              </span>
+              <div>
+                <span class="contact__label">Téléphone</span>
+                <a href="tel:+33100000000" class="contact__value">+33 1 00 00 00 00</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <span class="contact__label">Email</span>
+                <a href="mailto:contact@bns-transport.fr" class="contact__value">contact@bns-transport.fr</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <span class="contact__label">Siège social</span>
+                <span class="contact__value">Paris, Île-de-France</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <span class="contact__label">Horaires</span>
+                <span class="contact__value">Lun–Dim : 24h/24, 7j/7</span>
+              </div>
+            </li>
+          </ul>
+          <div class="contact__urgency">
+            <strong>Besoin urgent ?</strong>
+            <p>Appelez-nous directement pour une prise en charge immédiate.</p>
+            <a href="tel:+33100000000" class="btn btn--primary">Appeler maintenant</a>
+          </div>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="entreprise">Entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" placeholder="Votre société" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.fr" required />
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Type de prestation</label>
+            <select id="service" name="service">
+              <option value="">-- Sélectionnez --</option>
+              <option value="fret">Transport de fret</option>
+              <option value="express">Livraison express</option>
+              <option value="longue">Longue distance</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin : type de marchandise, départ, destination, délai souhaité..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Envoyer ma demande</button>
+          <p class="form-notice">* Champs obligatoires. Réponse garantie sous 24h ouvrées.</p>
+          <div class="form-success" id="formSuccess" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Merci ! Votre demande a bien été envoyée. Nous vous répondrons très prochainement.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#accueil" class="logo logo--light">
+          <span class="logo__icon">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="6" fill="#fff" opacity=".15"/>
+              <path d="M6 24V14h8l4 4h6v6H6z" fill="#fff" opacity=".9"/>
+              <circle cx="10" cy="24" r="2.5" fill="#1B4B8A"/>
+              <circle cx="22" cy="24" r="2.5" fill="#1B4B8A"/>
+            </svg>
+          </span>
+          <span class="logo__text">BNS<strong>Transport</strong></span>
+        </a>
+        <p>Transport routier professionnel.<br>Basé à Paris, disponible partout en France.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#zones">Zones</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact rapide</h4>
+        <p><a href="tel:+33100000000">+33 1 00 00 00 00</a></p>
+        <p><a href="mailto:contact@bns-transport.fr">contact@bns-transport.fr</a></p>
+        <p>Paris, Île-de-France</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2024 BNS Transport. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#accueil" class="back-to-top" id="backToTop" aria-label="Retour en haut">&#8593;</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
