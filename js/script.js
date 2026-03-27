@@ -85,18 +85,27 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Envoi en cours…';
 
-      /* Simulate async send (replace with real fetch/API call) */
-      setTimeout(function () {
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-        formSuccess.hidden = false;
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      var data = new FormData(form);
 
-        setTimeout(function () {
-          formSuccess.hidden = true;
-        }, 8000);
-      }, 1200);
+      fetch('/api/contact.php', { method: 'POST', body: data })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.ok) {
+            form.reset();
+            formSuccess.hidden = false;
+            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            setTimeout(function () { formSuccess.hidden = true; }, 8000);
+          } else {
+            alert(json.error || "Une erreur est survenue. Veuillez réessayer.");
+          }
+        })
+        .catch(function () {
+          alert("Une erreur est survenue. Veuillez réessayer.");
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        });
     });
   }
 

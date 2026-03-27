@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="BNS Transport recrute — Rejoignez notre équipe de chauffeurs professionnels. Envoyez votre candidature avec CV, permis et carte FCO." />
   <title>Recrutement — BNS Transport</title>
+  <link rel="icon" type="image/png" href="../asset/logo/V3.png" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -108,8 +109,6 @@
         <form
           class="recruit__form"
           id="recruitForm"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
           enctype="multipart/form-data"
           novalidate
         >
@@ -285,11 +284,42 @@
         });
       });
 
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('success') === 'true') {
-        document.getElementById('recruitSuccess').hidden = false;
-        document.getElementById('recruitForm').hidden = true;
-      }
+      // Submit via fetch
+      var form        = document.getElementById('recruitForm');
+      var successEl   = document.getElementById('recruitSuccess');
+      var submitBtn   = form.querySelector('[type="submit"]');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours…';
+
+        fetch('../api/recrutement.php', { method: 'POST', body: new FormData(form) })
+          .then(function (res) { return res.json(); })
+          .then(function (json) {
+            if (json.ok) {
+              form.hidden = true;
+              successEl.hidden = false;
+              successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+              alert(json.error || "Une erreur est survenue. Veuillez réessayer.");
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalText;
+            }
+          })
+          .catch(function () {
+            alert("Une erreur est survenue. Veuillez réessayer.");
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          });
+      });
     })();
   </script>
 </body>
