@@ -220,33 +220,31 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   min-height: 100svh;
   display: flex;
   align-items: center;
-  background:
-    linear-gradient(135deg, #0e2d5a 0%, var(--blue) 50%, #1e5fad 100%);
   overflow: hidden;
+  background: #050f23;
 }
 
+/* Photo de fond */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 70% 30%, rgba(255,255,255,.04) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(255,255,255,.03) 0%, transparent 40%);
+  background: url('../asset/img/scania.jpg') center/cover no-repeat;
+  filter: brightness(.5) saturate(1.1);
 }
 
-/* Subtle road texture */
+/* Gradient latéral : lisibilité du texte à gauche */
 .hero::after {
   content: '';
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 180px;
-  background: linear-gradient(to top, rgba(0,0,0,.25), transparent);
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5,15,35,.88) 0%, rgba(5,15,35,.55) 52%, rgba(5,15,35,.15) 100%),
+    linear-gradient(to top, rgba(0,0,0,.35) 0%, transparent 40%);
 }
 
 .hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: none;
 }
 
 .hero__content {
@@ -283,7 +281,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: -.02em;
   margin-bottom: 24px;
 }
-.hero__title span { color: rgba(255,255,255,.75); }
+.hero__title span { color: #60a5fa; }
 
 .hero__subtitle {
   font-size: clamp(1rem, 2vw, 1.15rem);
@@ -297,29 +295,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 48px;
 }
 
-.hero__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(255,255,255,.1);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 100px;
-  font-size: .82rem;
-  font-weight: 500;
-  color: rgba(255,255,255,.9);
-}
-.badge__icon { font-weight: 700; color: #7FBFFF; }
 
 /* ============================================================
    ABOUT
